@@ -1,0 +1,14 @@
+digraph "CFG for 'calculateAverage' function" {
+	label="CFG for 'calculateAverage' function";
+
+	Node0x5be63f342630 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{2:\l|  %3 = alloca ptr, align 8\l  %4 = alloca i32, align 4\l  %5 = alloca i32, align 4\l  %6 = alloca i32, align 4\l  store ptr %0, ptr %3, align 8\l  store i32 %1, ptr %4, align 4\l  store i32 0, ptr %5, align 4\l  store i32 0, ptr %6, align 4\l  br label %7\l}"];
+	Node0x5be63f342630 -> Node0x5be63f342a80[tooltip="2 -> 7\nProbability 100.00%" ];
+	Node0x5be63f342a80 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{7:\l|  %8 = load i32, ptr %6, align 4\l  %9 = load i32, ptr %4, align 4\l  %10 = icmp slt i32 %8, %9\l  br i1 %10, label %11, label %22\l|{<s0>T|<s1>F}}"];
+	Node0x5be63f342a80:s0 -> Node0x5be63f342c40[tooltip="7 -> 11\nProbability 96.88%" ];
+	Node0x5be63f342a80:s1 -> Node0x5be63f343170[tooltip="7 -> 22\nProbability 3.12%" ];
+	Node0x5be63f342c40 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{11:\l|  %12 = load ptr, ptr %3, align 8\l  %13 = load i32, ptr %6, align 4\l  %14 = sext i32 %13 to i64\l  %15 = getelementptr inbounds i32, ptr %12, i64 %14\l  %16 = load i32, ptr %15, align 4\l  %17 = load i32, ptr %5, align 4\l  %18 = add nsw i32 %17, %16\l  store i32 %18, ptr %5, align 4\l  br label %19\l}"];
+	Node0x5be63f342c40 -> Node0x5be63f3436f0[tooltip="11 -> 19\nProbability 100.00%" ];
+	Node0x5be63f3436f0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{19:\l|  %20 = load i32, ptr %6, align 4\l  %21 = add nsw i32 %20, 1\l  store i32 %21, ptr %6, align 4\l  br label %7, !llvm.loop !6\l}"];
+	Node0x5be63f3436f0 -> Node0x5be63f342a80[tooltip="19 -> 7\nProbability 100.00%" ];
+	Node0x5be63f343170 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{22:\l|  %23 = load i32, ptr %5, align 4\l  %24 = sitofp i32 %23 to double\l  %25 = load i32, ptr %4, align 4\l  %26 = sitofp i32 %25 to double\l  %27 = fdiv double %24, %26\l  ret double %27\l}"];
+}

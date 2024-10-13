@@ -1,0 +1,5 @@
+digraph "CFG for 'main' function" {
+	label="CFG for 'main' function";
+
+	Node0x639cd0767f40 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{0:\l|  %1 = alloca i32, align 4\l  %2 = alloca [10 x i32], align 16\l  %3 = alloca [10 x i32], align 16\l  %4 = alloca i32, align 4\l  %5 = alloca i32, align 4\l  store i32 0, ptr %1, align 4\l  call void @llvm.memcpy.p0.p0.i64(ptr align 16 %2, ptr align 16\l... @__const.main.a, i64 40, i1 false)\l  call void @llvm.memset.p0.i64(ptr align 16 %3, i8 0, i64 40, i1 false)\l  store i32 5, ptr %4, align 4\l  store i32 3, ptr %5, align 4\l  %6 = getelementptr inbounds [10 x i32], ptr %2, i64 0, i64 0\l  %7 = getelementptr inbounds [10 x i32], ptr %3, i64 0, i64 0\l  %8 = load i32, ptr %4, align 4\l  %9 = load i32, ptr %5, align 4\l  call void @compute(ptr noundef %6, ptr noundef %7, i32 noundef %8, i32\l... noundef %9)\l  %10 = getelementptr inbounds [10 x i32], ptr %3, i64 0, i64 0\l  call void @printArray(ptr noundef %10, i32 noundef 10)\l  ret i32 0\l}"];
+}

@@ -1,0 +1,126 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="622pt" height="855pt" viewBox="0.00 0.00 621.66 855.20">
+<g id="graph0" class="graph" transform="translate(4,851.2000122070312) scale(1)" data-name="CFG for 'compute' function">
+
+<polygon fill="white" stroke="none" points="-4,4 -4,-851.2 617.66,-851.2 617.66,4 -4,4" style=""/>
+<text text-anchor="middle" x="306.83" y="-8.2" font-family="Times,serif" font-size="14.00" style="">CFG for 'compute' function</text>
+<!-- Node0x639cd0761f10 -->
+<g id="node1" class="node" pointer-events="visible" data-name="Node0x639cd0761f10">
+
+<polygon fill="#d65244" fill-opacity="0.439216" stroke="#3d50c3" points="337.21,-629.1 337.21,-846.7 605.26,-846.7 605.26,-629.1 337.21,-629.1" style=""/>
+<text text-anchor="start" x="345.21" y="-830.1" font-family="Courier,monospace" font-size="14.00" style="">4:</text>
+<polyline fill="none" stroke="#3d50c3" points="337.21,-821.9 605.26,-821.9" style=""/>
+<text text-anchor="start" x="345.21" y="-805.3" font-family="Courier,monospace" font-size="14.00" style="">%5 = alloca ptr, align 8</text>
+<text text-anchor="start" x="345.21" y="-788.5" font-family="Courier,monospace" font-size="14.00" style=""> %6 = alloca ptr, align 8</text>
+<text text-anchor="start" x="345.21" y="-771.7" font-family="Courier,monospace" font-size="14.00" style=""> %7 = alloca i32, align 4</text>
+<text text-anchor="start" x="345.21" y="-754.9" font-family="Courier,monospace" font-size="14.00" style=""> %8 = alloca i32, align 4</text>
+<text text-anchor="start" x="345.21" y="-738.1" font-family="Courier,monospace" font-size="14.00" style=""> %9 = alloca i32, align 4</text>
+<text text-anchor="start" x="345.21" y="-721.3" font-family="Courier,monospace" font-size="14.00" style=""> store ptr %0, ptr %5, align 8</text>
+<text text-anchor="start" x="345.21" y="-704.5" font-family="Courier,monospace" font-size="14.00" style=""> store ptr %1, ptr %6, align 8</text>
+<text text-anchor="start" x="345.21" y="-687.7" font-family="Courier,monospace" font-size="14.00" style=""> store i32 %2, ptr %7, align 4</text>
+<text text-anchor="start" x="345.21" y="-670.9" font-family="Courier,monospace" font-size="14.00" style=""> store i32 %3, ptr %8, align 4</text>
+<text text-anchor="start" x="345.21" y="-654.1" font-family="Courier,monospace" font-size="14.00" style=""> store i32 0, ptr %9, align 4</text>
+<text text-anchor="start" x="345.21" y="-637.3" font-family="Courier,monospace" font-size="14.00" style=""> br label %10</text>
+</g>
+<!-- Node0x639cd0765590 -->
+<g id="node2" class="node" pointer-events="visible" data-name="Node0x639cd0765590">
+
+<polygon fill="#b70d28" fill-opacity="0.439216" stroke="#b70d28" points="328.81,-484.1 328.81,-592.1 613.66,-592.1 613.66,-484.1 328.81,-484.1" style=""/>
+<text text-anchor="start" x="336.81" y="-575.5" font-family="Courier,monospace" font-size="14.00" style="">10:</text>
+<polyline fill="none" stroke="#b70d28" points="328.81,-567.3 613.66,-567.3" style=""/>
+<text text-anchor="start" x="336.81" y="-550.7" font-family="Courier,monospace" font-size="14.00" style="">%11 = load i32, ptr %9, align 4</text>
+<text text-anchor="start" x="336.81" y="-533.9" font-family="Courier,monospace" font-size="14.00" style=""> %12 = icmp slt i32 %11, 10</text>
+<text text-anchor="start" x="336.81" y="-517.1" font-family="Courier,monospace" font-size="14.00" style=""> br i1 %12, label %13, label %30</text>
+<polyline fill="none" stroke="#b70d28" points="328.81,-508.9 613.66,-508.9" style=""/>
+<text text-anchor="middle" x="400.01" y="-492.3" font-family="Courier,monospace" font-size="14.00" style="">T</text>
+<polyline fill="none" stroke="#b70d28" points="471.21,-484.1 471.21,-508.9" style=""/>
+<text text-anchor="middle" x="542.42" y="-492.3" font-family="Courier,monospace" font-size="14.00" style="">F</text>
+</g>
+<!-- Node0x639cd0761f10&#45;&gt;Node0x639cd0765590 -->
+<g id="edge1" class="edge" data-name="Node0x639cd0761f10-&gt;Node0x639cd0765590">
+
+<g id="a_edge1"><a xlink:title="4 -&gt; 10&#10;Probability 100.00%" style="">
+<path fill="none" stroke="black" d="M471.23,-629.32C471.23,-620.35 471.23,-611.47 471.23,-602.99" style=""/>
+<polygon fill="black" stroke="black" points="474.73,-603.21 471.23,-593.21 467.73,-603.21 474.73,-603.21" style=""/>
+</a>
+</g>
+</g>
+<!-- Node0x639cd07656d0 -->
+<g id="node3" class="node" pointer-events="visible" data-name="Node0x639cd07656d0">
+
+<polygon fill="#b70d28" fill-opacity="0.439216" stroke="#b70d28" points="0,-162.3 0,-447.1 444.47,-447.1 444.47,-162.3 0,-162.3" style=""/>
+<text text-anchor="start" x="8" y="-430.5" font-family="Courier,monospace" font-size="14.00" style="">13:</text>
+<polyline fill="none" stroke="#b70d28" points="0,-422.3 444.47,-422.3" style=""/>
+<text text-anchor="start" x="8" y="-405.7" font-family="Courier,monospace" font-size="14.00" style="">%14 = load ptr, ptr %5, align 8</text>
+<text text-anchor="start" x="8" y="-388.9" font-family="Courier,monospace" font-size="14.00" style=""> %15 = load i32, ptr %9, align 4</text>
+<text text-anchor="start" x="8" y="-372.1" font-family="Courier,monospace" font-size="14.00" style=""> %16 = sext i32 %15 to i64</text>
+<text text-anchor="start" x="8" y="-355.3" font-family="Courier,monospace" font-size="14.00" style=""> %17 = getelementptr inbounds i32, ptr %14, i64 %16</text>
+<text text-anchor="start" x="8" y="-338.5" font-family="Courier,monospace" font-size="14.00" style=""> %18 = load i32, ptr %17, align 4</text>
+<text text-anchor="start" x="8" y="-321.7" font-family="Courier,monospace" font-size="14.00" style=""> %19 = load i32, ptr %8, align 4</text>
+<text text-anchor="start" x="8" y="-304.9" font-family="Courier,monospace" font-size="14.00" style=""> %20 = mul nsw i32 %18, %19</text>
+<text text-anchor="start" x="8" y="-288.1" font-family="Courier,monospace" font-size="14.00" style=""> %21 = load i32, ptr %7, align 4</text>
+<text text-anchor="start" x="8" y="-271.3" font-family="Courier,monospace" font-size="14.00" style=""> %22 = add nsw i32 %20, %21</text>
+<text text-anchor="start" x="8" y="-254.5" font-family="Courier,monospace" font-size="14.00" style=""> %23 = load ptr, ptr %6, align 8</text>
+<text text-anchor="start" x="8" y="-237.7" font-family="Courier,monospace" font-size="14.00" style=""> %24 = load i32, ptr %9, align 4</text>
+<text text-anchor="start" x="8" y="-220.9" font-family="Courier,monospace" font-size="14.00" style=""> %25 = sext i32 %24 to i64</text>
+<text text-anchor="start" x="8" y="-204.1" font-family="Courier,monospace" font-size="14.00" style=""> %26 = getelementptr inbounds i32, ptr %23, i64 %25</text>
+<text text-anchor="start" x="8" y="-187.3" font-family="Courier,monospace" font-size="14.00" style=""> store i32 %22, ptr %26, align 4</text>
+<text text-anchor="start" x="8" y="-170.5" font-family="Courier,monospace" font-size="14.00" style=""> br label %27</text>
+</g>
+<!-- Node0x639cd0765590&#45;&gt;Node0x639cd07656d0 -->
+<g id="edge2" class="edge" data-name="Node0x639cd07655900-&gt;Node0x639cd07656d0" data-comment="Node0x639cd0765590-&gt;Node0x639cd07656d0">
+
+<g id="a_edge2"><a xlink:title="10 -&gt; 13&#10;Probability 96.88%" style="">
+<path fill="none" stroke="black" d="M328.23,-496.1C299.85,-496.1 278.99,-479.74 263.69,-456.61" style=""/>
+<polygon fill="black" stroke="black" points="266.86,-455.09 258.68,-448.36 260.88,-458.72 266.86,-455.09" style=""/>
+</a>
+</g>
+</g>
+<!-- Node0x639cd0765720 -->
+<g id="node4" class="node" pointer-events="visible" data-name="Node0x639cd0765720">
+
+<polygon fill="#d65244" fill-opacity="0.439216" stroke="#3d50c3" points="500.63,-279.9 500.63,-329.5 583.84,-329.5 583.84,-279.9 500.63,-279.9" style=""/>
+<text text-anchor="start" x="508.63" y="-312.9" font-family="Courier,monospace" font-size="14.00" style="">30:</text>
+<polyline fill="none" stroke="#3d50c3" points="500.63,-304.7 583.84,-304.7" style=""/>
+<text text-anchor="start" x="508.63" y="-288.1" font-family="Courier,monospace" font-size="14.00" style="">ret void</text>
+</g>
+<!-- Node0x639cd0765590&#45;&gt;Node0x639cd0765720 -->
+<g id="edge3" class="edge" data-name="Node0x639cd07655901-&gt;Node0x639cd0765720" data-comment="Node0x639cd0765590-&gt;Node0x639cd0765720">
+
+<g id="a_edge3"><a xlink:title="10 -&gt; 30&#10;Probability 3.12%" style="">
+<path fill="none" stroke="black" d="M542.23,-483.6C542.23,-433.93 542.23,-376.46 542.23,-340.59" style=""/>
+<polygon fill="black" stroke="black" points="545.73,-340.81 542.23,-330.81 538.73,-340.81 545.73,-340.81" style=""/>
+</a>
+</g>
+</g>
+<!-- Node0x639cd0765ea0 -->
+<g id="node5" class="node" pointer-events="visible" data-name="Node0x639cd0765ea0">
+
+<polygon fill="#b70d28" fill-opacity="0.439216" stroke="#b70d28" points="209.01,-25.3 209.01,-125.3 485.46,-125.3 485.46,-25.3 209.01,-25.3" style=""/>
+<text text-anchor="start" x="217.01" y="-108.7" font-family="Courier,monospace" font-size="14.00" style="">27:</text>
+<polyline fill="none" stroke="#b70d28" points="209.01,-100.5 485.46,-100.5" style=""/>
+<text text-anchor="start" x="217.01" y="-83.9" font-family="Courier,monospace" font-size="14.00" style="">%28 = load i32, ptr %9, align 4</text>
+<text text-anchor="start" x="217.01" y="-67.1" font-family="Courier,monospace" font-size="14.00" style=""> %29 = add nsw i32 %28, 1</text>
+<text text-anchor="start" x="217.01" y="-50.3" font-family="Courier,monospace" font-size="14.00" style=""> store i32 %29, ptr %9, align 4</text>
+<text text-anchor="start" x="217.01" y="-33.5" font-family="Courier,monospace" font-size="14.00" style=""> br label %10, !llvm.loop !6</text>
+</g>
+<!-- Node0x639cd07656d0&#45;&gt;Node0x639cd0765ea0 -->
+<g id="edge4" class="edge" data-name="Node0x639cd07656d0-&gt;Node0x639cd0765ea0">
+
+<g id="a_edge4"><a xlink:title="13 -&gt; 27&#10;Probability 100.00%" style="">
+<path fill="none" stroke="black" d="M299.8,-162.59C305.03,-153.09 310.1,-143.85 314.87,-135.18" style=""/>
+<polygon fill="black" stroke="black" points="317.84,-137.05 319.59,-126.6 311.7,-133.67 317.84,-137.05" style=""/>
+</a>
+</g>
+</g>
+<!-- Node0x639cd0765ea0&#45;&gt;Node0x639cd0765590 -->
+<g id="edge5" class="edge" data-name="Node0x639cd0765ea0-&gt;Node0x639cd0765590">
+
+<g id="a_edge5"><a xlink:title="27 -&gt; 10&#10;Probability 100.00%" style="">
+<path fill="none" stroke="black" d="M424.58,-125.18C436.02,-135.84 446.28,-148.1 453.23,-161.8 479.97,-214.44 477.9,-380.27 474.39,-472.9" style=""/>
+<polygon fill="black" stroke="black" points="470.89,-472.73 473.99,-482.86 477.89,-473.01 470.89,-472.73" style=""/>
+</a>
+</g>
+</g>
+</g>
+</svg>
