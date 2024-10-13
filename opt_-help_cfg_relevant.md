@@ -1,0 +1,17 @@
+--cfg-hide-cold-paths=<number>                                        - Hide blocks with relative frequency below the given value
+--cfg-hide-deoptimize-paths                                           - 
+--cfg-hide-unreachable-paths                                          -
+--dot-cfg-mssa=<file name for generated dot file>                     - file name for generated dot file
+--enable-loop-simplifycfg-term-folding                                -
+--hash-based-counter-split                                            - Rename counter variable of a comdat function based on cfg hash
+--break-crit-edges                                                   - Break critical edges in CFG
+--edge-bundles                                                       - Bundle Machine CFG Edges
+--flattencfg                                                         - Flatten the CFG
+--simplifycfg                                                        - Simplify the CFG
+--structurizecfg                                                     - Structurize the CFG
+--unreachableblockelim                                               - Remove unreachable blocks from the CFG
+-wasm-cfg-sort                                                      - Reorders blocks in topological order
+--wasm-cfg-stackify                                                  - Insert BLOCK/LOOP/TRY markers for WebAssembly scopes
+--pgo-view-block-coverage-graph                                       - Create a dot file of CFGs with block coverage inference information
+--r600-ir-structurize                                                 - Use StructurizeCFG IR pass
+--sample-profile-max-propagate-iterations=<uint>                      - Maximum number of iterations to go through when propagating sample block/edge weights through the CFG.
