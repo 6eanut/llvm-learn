@@ -19,6 +19,11 @@ int main(){
     int b[LENGTH]={0};
     int c=5,d=3;
     compute(a,b,c,d);
+    goto foo;
     printArray(b,LENGTH);
+
+foo:
+    printf("hello foo\n");
+
     return 0;
 }

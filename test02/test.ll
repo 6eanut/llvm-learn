@@ -5,6 +5,7 @@ target triple = "x86_64-pc-linux-gnu"
 
 @.str = private unnamed_addr constant [4 x i8] c"%d \00", align 1
 @__const.main.a = private unnamed_addr constant [10 x i32] [i32 1, i32 2, i32 3, i32 4, i32 5, i32 6, i32 7, i32 8, i32 9, i32 0], align 16
+@.str.1 = private unnamed_addr constant [11 x i8] c"hello foo\0A\00", align 1
 
 ; Function Attrs: noinline nounwind optnone uwtable
 define dso_local void @compute(ptr noundef %0, ptr noundef %1, i32 noundef %2, i32 noundef %3) #0 {
@@ -106,8 +107,10 @@ define dso_local i32 @main() #0 {
   %8 = load i32, ptr %4, align 4
   %9 = load i32, ptr %5, align 4
   call void @compute(ptr noundef %6, ptr noundef %7, i32 noundef %8, i32 noundef %9)
-  %10 = getelementptr inbounds [10 x i32], ptr %3, i64 0, i64 0
-  call void @printArray(ptr noundef %10, i32 noundef 10)
+  br label %10
+
+10:                                               ; preds = %0
+  %11 = call i32 (ptr, ...) @printf(ptr noundef @.str.1)
   ret i32 0
 }
 
