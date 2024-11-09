@@ -1,0 +1,5 @@
+digraph "CFG for 'first_online_pgdat' function" {
+	label="CFG for 'first_online_pgdat' function";
+
+	Node0x56462c3759a0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{0:\l|  %1 = tail call i64 @find_first_bit(ptr noundef nonnull getelementptr\l... inbounds ([5 x %struct.nodemask_t], ptr @node_states, i64 0, i64 1), i64\l... noundef 64) #6\l  %2 = trunc i64 %1 to i32\l  %3 = tail call i32 @llvm.umin.i32(i32 %2, i32 64)\l  %4 = zext nneg i32 %3 to i64\l  %5 = getelementptr [0 x ptr], ptr @node_data, i64 0, i64 %4\l  %6 = load ptr, ptr %5, align 8\l  ret ptr %6\l}"];
+}

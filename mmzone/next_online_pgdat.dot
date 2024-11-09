@@ -1,0 +1,10 @@
+digraph "CFG for 'next_online_pgdat' function" {
+	label="CFG for 'next_online_pgdat' function";
+
+	Node0x56462c379e30 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{1:\l|  %2 = getelementptr inbounds %struct.pglist_data, ptr %0, i64 0, i32 6\l  %3 = load i32, ptr %2, align 64\l  %4 = add i32 %3, 1\l  %5 = sext i32 %4 to i64\l  %6 = tail call i64 @find_next_bit(ptr noundef nonnull getelementptr inbounds\l... ([5 x %struct.nodemask_t], ptr @node_states, i64 0, i64 1), i64 noundef 64,\l... i64 noundef %5) #6\l  %7 = and i64 %6, 4294967232\l  %8 = icmp eq i64 %7, 0\l  br i1 %8, label %9, label %13\l|{<s0>T|<s1>F}}"];
+	Node0x56462c379e30:s0 -> Node0x56462c37a630[tooltip="1 -> 9\nProbability 37.50%" ];
+	Node0x56462c379e30:s1 -> Node0x56462c37a680[tooltip="1 -> 13\nProbability 62.50%" ];
+	Node0x56462c37a630 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{9:\l|  %10 = and i64 %6, 63\l  %11 = getelementptr [0 x ptr], ptr @node_data, i64 0, i64 %10\l  %12 = load ptr, ptr %11, align 8\l  br label %13\l}"];
+	Node0x56462c37a630 -> Node0x56462c37a680[tooltip="9 -> 13\nProbability 100.00%" ];
+	Node0x56462c37a680 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{13:\l|  %14 = phi ptr [ %12, %9 ], [ null, %1 ]\l  ret ptr %14\l}"];
+}

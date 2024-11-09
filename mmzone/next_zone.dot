@@ -1,0 +1,15 @@
+digraph "CFG for 'next_zone' function" {
+	label="CFG for 'next_zone' function";
+
+	Node0x56462c37acd0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{1:\l|  %2 = getelementptr inbounds %struct.zone, ptr %0, i64 0, i32 5\l  %3 = load ptr, ptr %2, align 16\l  %4 = getelementptr %struct.zone, ptr %3, i64 3\l  %5 = icmp ugt ptr %4, %0\l  br i1 %5, label %6, label %8\l|{<s0>T|<s1>F}}"];
+	Node0x56462c37acd0:s0 -> Node0x56462c37aff0[tooltip="1 -> 6\nProbability 50.00%" ];
+	Node0x56462c37acd0:s1 -> Node0x56462c37b040[tooltip="1 -> 8\nProbability 50.00%" ];
+	Node0x56462c37aff0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{6:\l|  %7 = getelementptr %struct.zone, ptr %0, i64 1\l  br label %20\l}"];
+	Node0x56462c37aff0 -> Node0x56462c37b1e0[tooltip="6 -> 20\nProbability 100.00%" ];
+	Node0x56462c37b040 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{8:\l|  %9 = getelementptr inbounds %struct.pglist_data, ptr %3, i64 0, i32 6\l  %10 = load i32, ptr %9, align 64\l  %11 = add i32 %10, 1\l  %12 = sext i32 %11 to i64\l  %13 = tail call i64 @find_next_bit(ptr noundef nonnull getelementptr\l... inbounds ([5 x %struct.nodemask_t], ptr @node_states, i64 0, i64 1), i64\l... noundef 64, i64 noundef %12) #6\l  %14 = and i64 %13, 4294967232\l  %15 = icmp eq i64 %14, 0\l  br i1 %15, label %16, label %20\l|{<s0>T|<s1>F}}"];
+	Node0x56462c37b040:s0 -> Node0x56462c37b6a0[tooltip="8 -> 16\nProbability 37.50%" ];
+	Node0x56462c37b040:s1 -> Node0x56462c37b1e0[tooltip="8 -> 20\nProbability 62.50%" ];
+	Node0x56462c37b6a0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{16:\l|  %17 = and i64 %13, 63\l  %18 = getelementptr [0 x ptr], ptr @node_data, i64 0, i64 %17\l  %19 = load ptr, ptr %18, align 8\l  br label %20\l}"];
+	Node0x56462c37b6a0 -> Node0x56462c37b1e0[tooltip="16 -> 20\nProbability 100.00%" ];
+	Node0x56462c37b1e0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{20:\l|  %21 = phi ptr [ %7, %6 ], [ %19, %16 ], [ null, %8 ]\l  ret ptr %21\l}"];
+}

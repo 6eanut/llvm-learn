@@ -1,0 +1,22 @@
+digraph "CFG for '__next_zones_zonelist' function" {
+	label="CFG for '__next_zones_zonelist' function";
+
+	Node0x56462c37bd40 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{3:\l|  %4 = icmp eq ptr %2, null\l  br i1 %4, label %5, label %11, !prof !5\l|{<s0>T|<s1>F}}"];
+	Node0x56462c37bd40:s0 -> Node0x56462c37be20[tooltip="3 -> 5\nProbability 0.05%" ];
+	Node0x56462c37bd40:s1 -> Node0x56462c37be70[tooltip="3 -> 11\nProbability 99.95%" ];
+	Node0x56462c37be20 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#ef886b70" fontname="Courier",label="{5:\l|  %6 = phi ptr [ %10, %5 ], [ %0, %3 ]\l  %7 = getelementptr inbounds %struct.zoneref, ptr %6, i64 0, i32 1\l  %8 = load i32, ptr %7, align 8\l  %9 = icmp ugt i32 %8, %1\l  %10 = getelementptr %struct.zoneref, ptr %6, i64 1\l  br i1 %9, label %5, label %28\l|{<s0>T|<s1>F}}"];
+	Node0x56462c37be20:s0 -> Node0x56462c37be20[tooltip="5 -> 5\nProbability 96.88%" ];
+	Node0x56462c37be20:s1 -> Node0x56462c37cdf0[tooltip="5 -> 28\nProbability 3.12%" ];
+	Node0x56462c37be70 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{11:\l|  %12 = phi ptr [ %27, %26 ], [ %0, %3 ]\l  %13 = getelementptr inbounds %struct.zoneref, ptr %12, i64 0, i32 1\l  %14 = load i32, ptr %13, align 8\l  %15 = icmp ugt i32 %14, %1\l  br i1 %15, label %26, label %16\l|{<s0>T|<s1>F}}"];
+	Node0x56462c37be70:s0 -> Node0x56462c37cef0[tooltip="11 -> 26\nProbability 50.00%" ];
+	Node0x56462c37be70:s1 -> Node0x56462c37d210[tooltip="11 -> 16\nProbability 50.00%" ];
+	Node0x56462c37d210 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{16:\l|  %17 = load ptr, ptr %12, align 8\l  %18 = icmp eq ptr %17, null\l  br i1 %18, label %28, label %19\l|{<s0>T|<s1>F}}"];
+	Node0x56462c37d210:s0 -> Node0x56462c37cdf0[tooltip="16 -> 28\nProbability 3.12%" ];
+	Node0x56462c37d210:s1 -> Node0x56462c37d460[tooltip="16 -> 19\nProbability 96.88%" ];
+	Node0x56462c37d460 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{19:\l|  %20 = getelementptr inbounds %struct.zone, ptr %17, i64 0, i32 4\l  %21 = load i32, ptr %20, align 8\l  %22 = sext i32 %21 to i64\l  %23 = tail call i8 asm sideeffect \" btq  $2,$1\\0A\\09/* output condition code\l... c*/\\0A\", \"=\{@ccc\},*m,Ir,~\{memory\},~\{dirflag\},~\{fpsr\},~\{flags\}\"(ptr nonnull\l... elementtype(i64) %2, i64 %22) #6, !srcloc !6\l  %24 = icmp ult i8 %23, 2\l  tail call void @llvm.assume(i1 %24)\l  %25 = icmp eq i8 %23, 0\l  br i1 %25, label %26, label %28\l|{<s0>T|<s1>F}}"];
+	Node0x56462c37d460:s0 -> Node0x56462c37cef0[tooltip="19 -> 26\nProbability 96.88%" ];
+	Node0x56462c37d460:s1 -> Node0x56462c37cdf0[tooltip="19 -> 28\nProbability 3.12%" ];
+	Node0x56462c37cef0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{26:\l|  %27 = getelementptr %struct.zoneref, ptr %12, i64 1\l  br label %11\l}"];
+	Node0x56462c37cef0 -> Node0x56462c37be70[tooltip="26 -> 11\nProbability 100.00%" ];
+	Node0x56462c37cdf0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{28:\l|  %29 = phi ptr [ %6, %5 ], [ %12, %16 ], [ %12, %19 ]\l  ret ptr %29\l}"];
+}
